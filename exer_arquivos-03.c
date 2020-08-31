@@ -30,6 +30,19 @@ apresentação:
 ~~~~~~~~~~~~ NÃO TERMINADO AINDA ~~~~~~~~~~~~
 
 */
+/**< CRIAR A ESTRUTURA CLIENTE */
+
+typedef struct{
+    int id;
+    char nome[BUFFER_SIZE];
+    char email[BUFFER_SIZE];
+    char celular[BUFFER_SIZE];
+}Contato;
+
+/**< CRIANDO VETOR CLIENTE */
+
+Contato contato[BUFFER_SIZE];
+
 void Cadastrar(char nome[BUFFER_SIZE], int tel){
     FILE *arquivo = fopen("agenda.txt","a");
     fprintf(arquivo, "%s %d\n", nome, tel);

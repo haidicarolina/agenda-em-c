@@ -5,12 +5,27 @@
 #define BUFFER_SIZE 30
 
 /*
+    Alunos: Cristiano
+            Haidi
+            Karina
+
 Faça um programa para manter as informações de uma agenda de contatos utilizando estruturas. O
 programa deve conter um menu inicial com 5 opções: i) incluir um novo contato; ii) excluir um
 contato existente; iii) alterar um contato existente; iv) listar todos os contatos cadastrados; e v)
 finalizar o programa. A estrutura do contato deve conter um código de identificação, nome, e-mail e
 celular. Os dados da agenda de contatos devem ser salvos em arquivo, garantindo que ao fechar o
 programa, os dados serão mantidos.
+
+ESTRUTURA
+
+VERIFICAR EMAIL (@ E DOMINIO)
+
+apresentação:
+
+    apresentação funcional (faz o CRUD)
+    como foi organizado o código
+    estrutura dos dados
+    formato de armazenagem dos dados
 
 ~~~~~~~~~~~~ NÃO TERMINADO AINDA ~~~~~~~~~~~~
 

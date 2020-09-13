@@ -42,9 +42,7 @@ void main() {
         printf("\n5 - Finalizar");
         printf("\nOpção: ");
         sscanf(fgets(userInput, BUFFER_SIZE-1, stdin),"%d", &opcao);
-        getchar();
         fflush(stdin);
-        fileInToArray();
         clrscr();
         switch (opcao) {
             case 1:
@@ -99,6 +97,7 @@ void incluirContato(char nome[BUFFER_SIZE],char tel[BUFFER_SIZE],char email[BUFF
 */
 void listarContato(){
     fflush(stdin);
+    fileInToArray();
     FILE *arquivo = fopen("agenda.txt","r");
     char str[128];
     int result;
@@ -127,7 +126,6 @@ void listarContato(){
     }
 
     fclose(arquivo);
-    getchar();
 }
 
 /*
@@ -148,6 +146,7 @@ int finalizar(){
     Description: altera campo Ativo para 0 (dados persistem no banco de dados)
 */
 void excluirContato (){
+    fileInToArray();
     FILE *arquivo = fopen("agenda.txt","r");
     FILE *copia = fopen("copia.txt","a");
     int opcao = 0, i = 0;
@@ -225,6 +224,7 @@ void fileInToArray (){
     Description: pesquisa e altera dados pelo ID informado
 */
 void alterarContato (){
+    fileInToArray();
     FILE *arquivo = fopen("agenda.txt","r");
     FILE *copia = fopen("copia.txt","a");
     char userInput[BUFFER_SIZE], nome[BUFFER_SIZE], tel[BUFFER_SIZE], email[BUFFER_SIZE];
